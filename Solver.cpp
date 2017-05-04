@@ -3,11 +3,11 @@
 
 void Solver::FillNodeMap()
 {
-	NodeMap.reserve(image.TellWidth());
+	NodeMap.reserve(static_cast<size_t>(image.TellWidth()));
 	for (size_t x = 0; x < image.TellWidth(); x++)
 	{
 		NodeMap.push_back(std::vector<Node>());
-		NodeMap[x].reserve(image.TellHeight());
+		NodeMap[x].reserve(static_cast<size_t>(image.TellHeight()));
 		for (size_t y = 0; y < image.TellHeight(); y++)
 		{
 			NodeMap[x].push_back(Node());

@@ -27,9 +27,7 @@ struct Solver
 	//the raw image data, only to be modified by drawNodes
 	BMP image;
 
-	std::string fileLocation;
-
-	Positon EndNode = EMPTY_POSITION;
+    Positon EndNode = EMPTY_POSITION;
 	Positon StartNode = EMPTY_POSITION;
 
 	//fills the node map with nodes
