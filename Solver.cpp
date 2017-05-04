@@ -76,7 +76,7 @@ bool Solver::checkNode()
 	return false;
 }
 
-void Solver::checkPlace(Positon nodeLocaion)
+void Solver::checkPlace(Position nodeLocaion)
 {
 	//so first we need to look at the current color and check if its an end node;
 	const pos x = nodeLocaion.PositionX;
@@ -199,10 +199,10 @@ bool Solver::lookForNextNode(const pos x,const  pos y, const Node& node)
 	return false;
 }
 
-Positon Solver::DrawNodes(const Positon name)
+Position Solver::DrawNodes(const Position name)
 {
 	const Node node = NodeMap[name.PositionX][name.PositionY];
-	const Positon other = node.fromWhere;
+	const Position other = node.fromWhere;
 
 	dis start;
 	const dis distance = caclDistance(name, other);
@@ -259,7 +259,7 @@ void Solver::start()
 	}
 	//draw the nodes
 
-	Positon temp = EndNode;
+	Position temp = EndNode;
 	while (true)
 	{
 		temp = DrawNodes(temp);
@@ -295,12 +295,12 @@ bool operator==(const RGBApixel & left, const RGBApixel & right)
 		left.Green == right.Green && left.Red == right.Red;
 }
 
-bool operator==(const Positon & left, const Positon & right)
+bool operator==(const Position & left, const Position & right)
 {
 	return left.PositionX == right.PositionX && left.PositionY == right.PositionY;
 }
 
-bool operator!=(const Positon & left, const Positon & right)
+bool operator!=(const Position & left, const Position & right)
 {
 	return left.PositionX != right.PositionX || left.PositionY != right.PositionY;
 }

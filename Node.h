@@ -14,13 +14,13 @@ enum NODE_TYPE
 	END,
 };
 
-struct Positon
+struct Position
 {
 	pos PositionX;
 	pos PositionY;
 };
 
-const Positon EMPTY_POSITION = {0, 0};
+const Position EMPTY_POSITION = {0, 0};
 
 
 struct  Node
@@ -29,17 +29,17 @@ struct  Node
 	NODE_TYPE Type = INVALID;
 	dis Distance = 0;
 	bool inList = false;
-	Positon thisPosition = EMPTY_POSITION;
-	Positon fromWhere = EMPTY_POSITION;
+	Position thisPosition = EMPTY_POSITION;
+	Position fromWhere = EMPTY_POSITION;
 	
-	Node();
+	Node() = default;
 	//first pass constructor
 	//set true for nodes that do not need to be check, like dead ends
-	Node(Positon ThisPosition, NODE_TYPE Type, bool IsChecked = false);
-	~Node();
+	Node(Position ThisPosition, NODE_TYPE Type, bool IsChecked = false);
+	~Node() = default;
 };
 
-inline dis caclDistance(const Positon& one, const Positon& two)
+inline dis caclDistance(const Position& one, const Position& two)
 {
 	return static_cast<dis>(abs((one.PositionX - two.PositionX) + (one.PositionY - two.PositionY)));
 }

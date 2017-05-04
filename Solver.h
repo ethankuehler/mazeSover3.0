@@ -12,8 +12,8 @@ const RGBApixel BLUE = { 0xff, 0x00, 0x00, 0x00 };
 const RGBApixel BLACK = { 0x00, 0x00, 0x00, 0x00 };
 
 bool operator==(const RGBApixel& left, const RGBApixel& right);
-bool operator==(const Positon& left, const Positon& right);
-bool operator!=(const Positon& left, const Positon& right);
+bool operator==(const Position& left, const Position& right);
+bool operator!=(const Position& left, const Position& right);
 
 
 
@@ -27,8 +27,8 @@ struct Solver
 	//the raw image data, only to be modified by drawNodes
 	BMP image;
 
-    Positon EndNode = EMPTY_POSITION;
-	Positon StartNode = EMPTY_POSITION;
+    Position EndNode = EMPTY_POSITION;
+	Position StartNode = EMPTY_POSITION;
 
 	//fills the node map with nodes
 	void FillNodeMap();
@@ -37,13 +37,13 @@ struct Solver
 	bool checkNode();
 
 	//check a place to see what type/if a positon is a node, only called my fillNodeMap;
-	void checkPlace(Positon nodeLocaion);
+	void checkPlace(Position nodeLocaion);
 
 	//look to see if position given is a node, if so it will diced if its neede to be modifyed. only called by checkNode
 	bool lookForNextNode(pos x, pos y, const Node& node);
 
 	//give it the end node and it will draw from there
-	Positon DrawNodes(Positon name);
+	Position DrawNodes(Position name);
 
 	//starts the solveing
 	void start();
