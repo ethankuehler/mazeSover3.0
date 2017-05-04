@@ -139,12 +139,12 @@ void Solver::checkPlace(Positon nodeLocaion)
 
 	if (numberOfMoves < 3)
 	{
-		if (canMove[0] == true && canMove[1] == true)
+		if (canMove[0] && canMove[1])
 		{
 			NodeMap[x][y] = Node({ x, y }, STRIGHT);
 			return;
 		}
-		if (canMove[2] == true && canMove[3] == true)
+		if (canMove[2] && canMove[3])
 		{
 			NodeMap[x][y] = Node({ x, y }, STRIGHT);
 			return;
@@ -163,9 +163,9 @@ bool Solver::lookForNextNode(const pos x,const  pos y, const Node& node)
 {
 	//we take a ref
 	auto& checking = NodeMap[x][y];
-	//assert(checking.Type != INVALIDE);
+	//assert(checking.Type != INVALID);
 	//if the node we are looking at is checked, we stop 
-	if (checking.isChecked == true)
+	if (checking.isChecked)
 	{
 		return true;
 	}
@@ -220,7 +220,7 @@ Positon Solver::DrawNodes(const Positon name)
 
 		for (size_t i = 0; i < distance; i++)
 		{
-			image.SetPixel(name.PositionX, start + i, GREEN);
+			image.SetPixel(name.PositionX, static_cast<int>(start + i), GREEN);
 		}
 	}
 	//draw on x line
@@ -237,7 +237,7 @@ Positon Solver::DrawNodes(const Positon name)
 
 		for (size_t i = 0; i <= distance; i++)
 		{
-			image.SetPixel(start + i, name.PositionY, GREEN);
+			image.SetPixel(static_cast<int>(start + i), name.PositionY, GREEN);
 		}
 	}
 
@@ -255,7 +255,7 @@ void Solver::start()
 	bool foundEnd = NodeMap[EndNode.PositionX][EndNode.PositionY].isChecked;
 	if (!foundEnd)
 	{
-		throw EndNotFoundException();
+		throw NoPathToEnd();
 	}
 	//draw the nodes
 
@@ -278,8 +278,7 @@ void Solver::start()
 Solver::Solver(std::string fileName)
 {
 	image.ReadFromFile(fileName.c_str());
-	fileLocation = fileName;
-	FillNodeMap();
+    FillNodeMap();
 	if (EndNode == EMPTY_POSITION)
 	{
 		throw EndNotFoundException();
