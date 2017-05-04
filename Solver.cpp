@@ -31,8 +31,8 @@ bool Solver::checkNode()
 		const Node& node = nodeQueue.front();
 		//ok now we need to look until we find a node, once found we modify it if needed and place it on the queue
 
-		const pos x = node.thisPositon.PositionX;
-		const pos y = node.thisPositon.PositionY;
+		const pos x = node.thisPosition.PositionX;
+		const pos y = node.thisPosition.PositionY;
 
 		//looking left
 		bool quit = false;
@@ -141,12 +141,12 @@ void Solver::checkPlace(Positon nodeLocaion)
 	{
 		if (canMove[0] && canMove[1])
 		{
-			NodeMap[x][y] = Node({ x, y }, STRIGHT);
+			NodeMap[x][y] = Node({ x, y }, STRAIGHT);
 			return;
 		}
 		if (canMove[2] && canMove[3])
 		{
-			NodeMap[x][y] = Node({ x, y }, STRIGHT);
+			NodeMap[x][y] = Node({ x, y }, STRAIGHT);
 			return;
 		}
 		if (numberOfMoves < 2)
@@ -170,14 +170,14 @@ bool Solver::lookForNextNode(const pos x,const  pos y, const Node& node)
 		return true;
 	}
 	//if the node has a type grader then stright, its a node
-	if (checking.Type > STRIGHT)
+	if (checking.Type > STRAIGHT)
 	{
 		//we get the distance to the total distance
-		const dis totalDistance = caclDistance(checking.thisPositon, node.thisPositon) + node.Distance;
+		const dis totalDistance = caclDistance(checking.thisPosition, node.thisPosition) + node.Distance;
 		if (!checking.inList)
 		{
 			checking.Distance = totalDistance;
-			checking.fromWhere = node.thisPositon;
+			checking.fromWhere = node.thisPosition;
 			checking.inList = true;
 			nodeQueue.push(checking);
 			return true;
@@ -189,7 +189,7 @@ bool Solver::lookForNextNode(const pos x,const  pos y, const Node& node)
 			//we modify the NodeMap and updata the node where checking was pulled from
 			//lastly we add checking to the queue
 			checking.Distance = totalDistance;
-			checking.fromWhere = node.thisPositon;
+			checking.fromWhere = node.thisPosition;
 			nodeQueue.push(checking);
 			return true;
 		}

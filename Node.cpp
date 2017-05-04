@@ -6,9 +6,9 @@ Node::Node()
 }
 
 
-Node::Node(Positon ThisPosition, NODE_TPYE Type, bool IsChecked)
+Node::Node(Positon ThisPosition, NODE_TYPE Type, bool IsChecked)
 {
-	Node::thisPositon = ThisPosition;
+	Node::thisPosition = ThisPosition;
 	Node::Type = Type;
 	Node::isChecked = IsChecked;
 }
@@ -16,5 +16,3 @@ Node::Node(Positon ThisPosition, NODE_TPYE Type, bool IsChecked)
 Node::~Node()
 {
 }
-
-

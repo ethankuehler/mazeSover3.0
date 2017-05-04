@@ -22,7 +22,6 @@ int main(const int argc, const char* argv[])
 		}
 	}
 
-	double duration = (clock() - start) / static_cast<double>(CLOCKS_PER_SEC);
-
+	double duration = (clock() - start) / static_cast<double>(CLOCKS_PER_SEC);\
 	std::cout << "total time: " << duration << '\n';
 }

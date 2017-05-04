@@ -55,7 +55,7 @@ struct Solver
 
 struct StartNotFoundException : public std::exception
 {
-	const char * what() throw()
+	const char * what() const throw()
 	{
 		return "start not found exception";
 	}
@@ -63,7 +63,7 @@ struct StartNotFoundException : public std::exception
 
 struct EndNotFoundException : public std::exception
 {
-	const char * what() throw()
+	const char * what() const throw()
 	{
 		return "end not found exception";
 	}
@@ -71,7 +71,7 @@ struct EndNotFoundException : public std::exception
 
 struct NoPathToEnd : public std::exception
 {
-	const char * what() throw()
+	const char * what() const throw()
 	{
 		return "no path from start to end";
 	}
