@@ -1,5 +1,3 @@
-// mazeSolver3.cpp : Defines the entry point for the console application.
-//
 
 #include "Solver.h"
 #include <ctime>
@@ -24,4 +22,5 @@ int main(const int argc, const char* argv[])
 
 	double duration = (clock() - start) / static_cast<double>(CLOCKS_PER_SEC);\
 	std::cout << "total time: " << duration << '\n';
+    return 0;
 }
