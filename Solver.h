@@ -21,7 +21,7 @@ bool operator!=(const Position& left, const Position& right);
 struct Solver
 {
 	//a 2d vector of nodes, the position of each node is drectly coarspoing to its location on the image
-	std::vector<std::vector<Node>> NodeMap;
+	std::vector<std::vector<Node> > NodeMap;
 	//a queue of nodes to be checked by the func checkNode, nodes are pushed and poped by looKforNextNode who is called by checkNode; 
 	std::queue<Node> nodeQueue;
 	//the raw image data, only to be modified by drawNodes

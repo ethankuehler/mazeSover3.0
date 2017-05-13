@@ -1,4 +1,3 @@
-
 #include "Solver.h"
 #include <ctime>
 
