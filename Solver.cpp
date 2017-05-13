@@ -270,13 +270,12 @@ void Solver::start()
 	}
 	image.SetPixel(StartNode.PositionX, StartNode.PositionY, RED);
 	image.SetPixel(EndNode.PositionX, EndNode.PositionY, BLUE);
-
-
-	image.WriteToFile(getFileName().c_str());
+	SaveFile();
 }
 
 Solver::Solver(std::string fileName)
 {
+	Solver::fileName = fileName;
 	image.ReadFromFile(fileName.c_str());
     FillNodeMap();
 	if (EndNode == EMPTY_POSITION)
@@ -287,6 +286,15 @@ Solver::Solver(std::string fileName)
 	{
 		throw StartNotFoundException();
 	}
+}
+
+void Solver::SaveFile()
+{
+	auto i = fileName.find_last_of("/");
+	fileName.resize(i);
+	std::cout << getFileName().c_str() << '\n';
+	std::string output = fileName + getFileName();
+	image.WriteToFile(output.c_str());
 }
 
 bool operator==(const RGBApixel & left, const RGBApixel & right)

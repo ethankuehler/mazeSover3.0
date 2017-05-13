@@ -22,7 +22,6 @@ struct Position
 
 const Position EMPTY_POSITION = {0, 0};
 
-
 struct  Node
 {
 	bool isChecked = false;
