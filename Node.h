@@ -20,26 +20,6 @@ struct Position {
 
 const Position EMPTY_POSITION = {0, 0};
 
-<<<<<<< HEAD
-struct Node {
-  bool isChecked = false;
-  NODE_TYPE Type = INVALID;
-  dis Distance = 0;
-  bool inList = false;
-  Position thisPosition = EMPTY_POSITION;
-  Position fromWhere = EMPTY_POSITION;
-
-  Node() = default;
-  // first pass constructor
-  // set true for nodes that do not need to be check, like dead ends
-  Node(Position ThisPosition, NODE_TYPE Type, bool IsChecked = false);
-  ~Node() = default;
-};
-
-inline dis caclDistance(const Position& one, const Position& two) {
-  return static_cast<dis>(std::abs((one.PositionX - two.PositionX) +
-                                   (one.PositionY - two.PositionY)));
-=======
 struct Node {
   bool isChecked = false;
   NODE_TYPE Type = INVALID;
@@ -58,5 +38,4 @@ struct Node {
 inline dis caclDistance(const Position &one, const Position &two) {
   return static_cast<dis>(std::abs((one.PositionX - two.PositionX) +
                                    (one.PositionY - two.PositionY)));
->>>>>>> origin/LIB
 }
