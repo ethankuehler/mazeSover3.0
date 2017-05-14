@@ -1,10 +1,10 @@
 #pragma once
-#include "FileName.h"
-#include "Node.h"
-#include "easyBMP/EasyBMP.h"
 #include <exception>
 #include <queue>
 #include <vector>
+#include "FileName.h"
+#include "Node.h"
+#include "easyBMP/EasyBMP.h"
 
 const RGBApixel RED = {0x00, 0x00, 0xff, 0x00};
 const RGBApixel GREEN = {0x00, 0xff, 0x00, 0x00};
@@ -16,19 +16,20 @@ bool operator==(const Position &left, const Position &right);
 bool operator!=(const Position &left, const Position &right);
 
 <<<<<<< HEAD
-struct Solver
-{
-	//a 2d vector of nodes, the position of each node is drectly coarspoing to its location on the image
-	std::vector<std::vector<Node> > NodeMap;
-	//a queue of nodes to be checked by the func checkNode, nodes are pushed and poped by looKforNextNode who is called by checkNode; 
-	std::queue<Node> nodeQueue;
-	//the raw image data, only to be modified by drawNodes
-	BMP image;
+struct Solver {
+  // a 2d vector of nodes, the position of each node is drectly coarspoing to
+  // its location on the image
+  std::vector<std::vector<Node> > NodeMap;
+  // a queue of nodes to be checked by the func checkNode, nodes are pushed and
+  // poped by looKforNextNode who is called by checkNode;
+  std::queue<Node> nodeQueue;
+  // the raw image data, only to be modified by drawNodes
+  BMP image;
 =======
 struct Solver {
   // a 2d vector of nodes, the position of each node is drectly coarspoing to
   // its location on the image
-  std::vector<std::vector<Node>> NodeMap;
+  std::vector<std::vector<Node> > NodeMap;
   // a queue of nodes to be checked by the func checkNode, nodes are pushed and
   // poped by looKforNextNode who is called by checkNode;
   std::queue<Node> nodeQueue;
@@ -49,11 +50,10 @@ struct Solver {
   bool checkNode();
 
 <<<<<<< HEAD
-    std::string fileName;
+  std::string fileName;
 
-
-	//fills the node map with nodes
-	void FillNodeMap();
+  // fills the node map with nodes
+  void FillNodeMap();
 =======
   // check a place to see what type/if a positon is a node, only called my
   // fillNodeMap;
@@ -73,15 +73,15 @@ struct Solver {
   void SaveFile();
 
 <<<<<<< HEAD
-	//starts the solveing
-	void start();
+  // starts the solveing
+  void start();
 
-    void SaveFile();
+  void SaveFile();
 
-	//louds the map, fill the NodeMaze. can throw
-	Solver(std::string fileName);
+  // louds the map, fill the NodeMaze. can throw
+  Solver(std::string fileName);
 
-	~Solver() = default;
+  ~Solver() = default;
 
 
 =======
