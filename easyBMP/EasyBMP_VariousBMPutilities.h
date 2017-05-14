@@ -24,6 +24,7 @@
 //ethan was here
 #include "EasyBMP_BMP.h"
 #include "EasyBMP_DataStructures.h"
+#include "EasyBMP.h"
 //ethan was here
 
 BMFH GetBMFH( const char* szFileNameIn );

@@ -22,10 +22,10 @@
 #define _EasyBMP_BMP_h_
 
 
-//modified by ethan
+//modifyed by ethan
 #include <cstdio>
 #include "EasyBMP_DataStructures.h"
-//modified by ethan
+//mydifyed by ethan 
 
 bool SafeFread( char* buffer, int size, int number, FILE* fp );
 bool EasyBMPcheckDataSize( void );
