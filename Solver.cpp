@@ -250,8 +250,7 @@ Solver::Solver(std::string fileName) {
 void Solver::SaveFile() {
   auto i = fileName.find_last_of("/");
   fileName.resize(i);
-  std::cout << getFileName().c_str() << '\n';
-  std::string output = fileName + getFileName();
+  std::string output = fileName + '/' + getFileName();
   image.WriteToFile(output.c_str());
 }
 
