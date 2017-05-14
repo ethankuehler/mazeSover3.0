@@ -5,10 +5,10 @@ typedef unsigned short pos, dis;
 
 enum NODE_TYPE
 {
-    INVALID,
+    	INVALID,
 	WALL,//auto flag isChecked = true
 	DEAD_END, // auto flag isChecked = true 
-    STRAIGHT, // only non-node that is not auto isChecked = true;
+    	STRAIGHT, // only non-node that is not auto isChecked = true;
 	NODE,
 	START,
 	END,
