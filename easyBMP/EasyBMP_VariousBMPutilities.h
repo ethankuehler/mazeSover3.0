@@ -21,6 +21,12 @@
 #ifndef _EasyBMP_VariousBMPutilities_h_
 #define _EasyBMP_VariousBMPutilities_h_
 
+//ethan was here
+#include "EasyBMP_BMP.h"
+#include "EasyBMP_DataStructures.h"
+#include "EasyBMP.h"
+//ethan was here
+
 BMFH GetBMFH( const char* szFileNameIn );
 BMIH GetBMIH( const char* szFileNameIn );
 void DisplayBitmapInfo( const char* szFileNameIn );

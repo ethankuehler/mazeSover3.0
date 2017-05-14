@@ -5,6 +5,7 @@
 #ifndef MAZESOVER3_0_FUNCTIONS_H
 #define MAZESOVER3_0_FUNCTIONS_H
 
+<<<<<<< HEAD
 
 extern "C"
 {
@@ -13,3 +14,10 @@ extern "C"
 
 
 #endif //MAZESOVER3_0_FUNCTIONS_H
+=======
+extern "C" {
+int START_SOLVER(char fileLocation[]);
+};
+
+#endif // MAZESOVER3_0_FUNCTIONS_H
+>>>>>>> origin/LIB
