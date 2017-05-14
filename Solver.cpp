@@ -234,32 +234,6 @@ void Solver::start() {
   SaveFile();
 }
 
-<<<<<<< HEAD
-void Solver::start() {
-  // place the start node on the queue
-  nodeQueue.push(NodeMap[StartNode.PositionX][StartNode.PositionY]);
-  // run the queue
-  checkNode();
-
-  bool foundEnd = NodeMap[EndNode.PositionX][EndNode.PositionY].isChecked;
-  if (!foundEnd) {
-    throw NoPathToEnd();
-  }
-  // draw the nodes
-
-  Position temp = EndNode;
-  while (true) {
-    temp = DrawNodes(temp);
-    if (temp.PositionX == StartNode.PositionX &&
-        temp.PositionY == StartNode.PositionY) {
-      break;
-      ;
-    }
-  }
-  image.SetPixel(StartNode.PositionX, StartNode.PositionY, RED);
-  image.SetPixel(EndNode.PositionX, EndNode.PositionY, BLUE);
-  SaveFile();
-}
 
 Solver::Solver(std::string fileName) {
   Solver::fileName = fileName;
@@ -284,31 +258,6 @@ void Solver::SaveFile() {
 bool operator==(const RGBApixel &left, const RGBApixel &right) {
   return left.Alpha == right.Alpha && left.Blue == right.Blue &&
          left.Green == right.Green && left.Red == right.Red;
-=======
-Solver::Solver(std::string fileName) {
-  Solver::fileName = fileName;
-  image.ReadFromFile(fileName.c_str());
-  FillNodeMap();
-  if (EndNode == EMPTY_POSITION) {
-    throw EndNotFoundException();
-  }
-  if (StartNode == EMPTY_POSITION) {
-    throw StartNotFoundException();
-  }
-}
-
-void Solver::SaveFile() {
-  auto i = fileName.find_last_of("/");
-  fileName.resize(i);
-  std::cout << getFileName().c_str() << '\n';
-  std::string output = fileName + getFileName();
-  image.WriteToFile(output.c_str());
-}
-
-bool operator==(const RGBApixel &left, const RGBApixel &right) {
-  return left.Alpha == right.Alpha && left.Blue == right.Blue &&
-         left.Green == right.Green && left.Red == right.Red;
->>>>>>> origin/LIB
 }
 
 bool operator==(const Position &left, const Position &right) {
