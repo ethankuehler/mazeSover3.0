@@ -5,8 +5,8 @@ typedef unsigned short pos, dis;
 
 enum NODE_TYPE {
   INVALID,
-  WALL,      // auto flag isChecked = true
-  DEAD_END,  // auto flag isChecked = true
+  WALL,      // flag isChecked as true
+  DEAD_END,  // flag isChecked as true
   STRAIGHT,  // only non-node that is not auto isChecked = true;
   NODE,
   START,
@@ -29,13 +29,11 @@ struct Node {
   Position fromWhere = EMPTY_POSITION;
 
   Node() = default;
-  // first pass constructor
-  // set true for nodes that do not need to be check, like dead ends
   Node(Position ThisPosition, NODE_TYPE Type, bool IsChecked = false);
   ~Node() = default;
 };
-
-inline dis caclDistance(const Position &one, const Position &two) {
+//used to calculate the distance form one position to another
+inline dis calcDistance(const Position &one, const Position &two) {
   return static_cast<dis>(std::abs((one.PositionX - two.PositionX) +
                                    (one.PositionY - two.PositionY)));
 }
