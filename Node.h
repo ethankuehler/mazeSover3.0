@@ -22,7 +22,6 @@ struct Position
 
 const Position EMPTY_POSITION = {0, 0};
 
-
 struct  Node
 {
 	bool isChecked = false;
@@ -41,5 +40,5 @@ struct  Node
 
 inline dis caclDistance(const Position& one, const Position& two)
 {
-	return static_cast<dis>(abs((one.PositionX - two.PositionX) + (one.PositionY - two.PositionY)));
+	return static_cast<dis>(std::abs((one.PositionX - two.PositionX) + (one.PositionY - two.PositionY)));
 }

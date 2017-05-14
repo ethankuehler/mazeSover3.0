@@ -15,13 +15,10 @@ bool operator==(const RGBApixel& left, const RGBApixel& right);
 bool operator==(const Position& left, const Position& right);
 bool operator!=(const Position& left, const Position& right);
 
-
-
-
 struct Solver
 {
 	//a 2d vector of nodes, the position of each node is drectly coarspoing to its location on the image
-	std::vector<std::vector<Node>> NodeMap;
+	std::vector<std::vector<Node> > NodeMap;
 	//a queue of nodes to be checked by the func checkNode, nodes are pushed and poped by looKforNextNode who is called by checkNode; 
 	std::queue<Node> nodeQueue;
 	//the raw image data, only to be modified by drawNodes
@@ -29,6 +26,9 @@ struct Solver
 
     Position EndNode = EMPTY_POSITION;
 	Position StartNode = EMPTY_POSITION;
+
+    std::string fileName;
+
 
 	//fills the node map with nodes
 	void FillNodeMap();
@@ -47,10 +47,15 @@ struct Solver
 
 	//starts the solveing
 	void start();
-	//louds the map, fill the NodeMaze. can throw 
+
+    void SaveFile();
+
+	//louds the map, fill the NodeMaze. can throw
 	Solver(std::string fileName);
 
 	~Solver() = default;
+
+
 };
 
 struct StartNotFoundException : public std::exception
