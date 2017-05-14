@@ -148,7 +148,7 @@ bool Solver::lookForNextNode(const pos x, const pos y, const Node &node) {
   if (checking.Type > STRAIGHT) {
     // we get the distance to the total distance
     const dis totalDistance =
-        caclDistance(checking.thisPosition, node.thisPosition) + node.Distance;
+            calcDistance(checking.thisPosition, node.thisPosition) + node.Distance;
     if (!checking.inList) {
       checking.Distance = totalDistance;
       checking.fromWhere = node.thisPosition;
@@ -179,7 +179,7 @@ Position Solver::DrawNodes(const Position name) {
   const Position other = node.fromWhere;
 
   dis start;
-  const dis distance = caclDistance(name, other);
+  const dis distance = calcDistance(name, other);
   // draw on y line
   if (name.PositionX == other.PositionX) {
     if (name.PositionY > other.PositionY) {

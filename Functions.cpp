@@ -1,5 +1,6 @@
 #include "Solver.h"
-#include "string"
+#include <string>
+
 extern "C" {
 int START_SOLVER(char fileLocation[]) {
   std::string file = fileLocation;
