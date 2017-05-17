@@ -21,11 +21,11 @@ struct Position {
 const Position EMPTY_POSITION = {0, 0};
 
 struct Node {
-  bool isChecked = false;
+  bool IsChecked = false;
   NODE_TYPE Type = INVALID;
   dis Distance = 0;
   bool inList = false;
-  Position thisPosition = EMPTY_POSITION;
+  Position ThisPosition = EMPTY_POSITION;
   Position fromWhere = EMPTY_POSITION;
 
   Node() = default;

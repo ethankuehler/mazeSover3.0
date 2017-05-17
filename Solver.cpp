@@ -24,8 +24,8 @@ bool Solver::checkNode() {
     // ok now we need to look until we find a node, once found we modify it if
     // needed and place it on the queue
 
-    const pos x = node.thisPosition.PositionX;
-    const pos y = node.thisPosition.PositionY;
+    const pos x = node.ThisPosition.PositionX;
+    const pos y = node.ThisPosition.PositionY;
 
     // looking left
     bool quit = false;
@@ -58,7 +58,7 @@ bool Solver::checkNode() {
       quit = lookForNextNode(x, y - step, node);
       step++;
     }
-    NodeMap[x][y].isChecked = true;
+    NodeMap[x][y].IsChecked = true;
     nodeQueue.pop();
   }
 
@@ -141,17 +141,17 @@ bool Solver::lookForNextNode(const pos x, const pos y, const Node &node) {
   auto &checking = NodeMap[x][y];
   // assert(checking.Type != INVALID);
   // if the node we are looking at is checked, we stop
-  if (checking.isChecked) {
+  if (checking.IsChecked) {
     return true;
   }
   // if the node has a type grader then stright, its a node
   if (checking.Type > STRAIGHT) {
     // we get the distance to the total distance
     const dis totalDistance =
-            calcDistance(checking.thisPosition, node.thisPosition) + node.Distance;
+            calcDistance(checking.ThisPosition, node.ThisPosition) + node.Distance;
     if (!checking.inList) {
       checking.Distance = totalDistance;
-      checking.fromWhere = node.thisPosition;
+      checking.fromWhere = node.ThisPosition;
       checking.inList = true;
       nodeQueue.push(checking);
       return true;
@@ -164,7 +164,7 @@ bool Solver::lookForNextNode(const pos x, const pos y, const Node &node) {
       // from
       // lastly we add checking to the queue
       checking.Distance = totalDistance;
-      checking.fromWhere = node.thisPosition;
+      checking.fromWhere = node.ThisPosition;
       nodeQueue.push(checking);
       return true;
     }
@@ -214,7 +214,7 @@ void Solver::start() {
   // run the queue
   checkNode();
 
-  bool foundEnd = NodeMap[EndNode.PositionX][EndNode.PositionY].isChecked;
+  bool foundEnd = NodeMap[EndNode.PositionX][EndNode.PositionY].IsChecked;
   if (!foundEnd) {
     throw NoPathToEnd();
   }

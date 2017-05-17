@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\easybmp\</FILEPATH>
+      <FILENAME>easybmp_datastructures.h</FILENAME>
+      <LINE>24</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26497</DEFECTCODE>
+    <DESCRIPTION>This function Square could be marked constexpr if compile-time evaluation is desired. (f.4: https://go.microsoft.com/fwlink/p/?LinkID=784970)</DESCRIPTION>
+    <FUNCTION>Square</FUNCTION>
+    <DECORATED>?Square@@YANN@Z</DECORATED>
+    <FUNCLINE>24</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\easybmp\</FILEPATH>
+      <FILENAME>easybmp_datastructures.h</FILENAME>
+      <LINE>26</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26497</DEFECTCODE>
+    <DESCRIPTION>This function IntSquare could be marked constexpr if compile-time evaluation is desired. (f.4: https://go.microsoft.com/fwlink/p/?LinkID=784970)</DESCRIPTION>
+    <FUNCTION>IntSquare</FUNCTION>
+    <DECORATED>?IntSquare@@YAHH@Z</DECORATED>
+    <FUNCLINE>26</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\easybmp\</FILEPATH>
+      <FILENAME>easybmp_datastructures.h</FILENAME>
+      <LINE>43</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts that would perform a static_cast downcast, const_cast, or reinterpret_cast. (type.4: http://go.microsoft.com/fwlink/p/?LinkID=620420)</DESCRIPTION>
+    <FUNCTION>IsBigEndian</FUNCTION>
+    <DECORATED>?IsBigEndian@@YA_NXZ</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\easybmp\</FILEPATH>
+      <FILENAME>easybmp_datastructures.h</FILENAME>
+      <LINE>42</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26496</DEFECTCODE>
+    <DESCRIPTION>Variable 'word' is assigned only once, mark it as const. (con.4: https://go.microsoft.com/fwlink/p/?LinkID=784969)</DESCRIPTION>
+    <FUNCTION>IsBigEndian</FUNCTION>
+    <DECORATED>?IsBigEndian@@YA_NXZ</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\</FILEPATH>
+      <FILENAME>node.h</FILENAME>
+      <LINE>28</LINE>
+      <COLUMN>26</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts that would perform a static_cast downcast, const_cast, or reinterpret_cast. (type.4: http://go.microsoft.com/fwlink/p/?LinkID=620420)</DESCRIPTION>
+    <FUNCTION>Node::{ctor}</FUNCTION>
+    <DECORATED>??0Node@@QAE@XZ</DECORATED>
+    <FUNCLINE>31</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\</FILEPATH>
+      <FILENAME>node.h</FILENAME>
+      <LINE>29</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts that would perform a static_cast downcast, const_cast, or reinterpret_cast. (type.4: http://go.microsoft.com/fwlink/p/?LinkID=620420)</DESCRIPTION>
+    <FUNCTION>Node::{ctor}</FUNCTION>
+    <DECORATED>??0Node@@QAE@XZ</DECORATED>
+    <FUNCLINE>31</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\</FILEPATH>
+      <FILENAME>solver.cpp</FILENAME>
+      <LINE>23</LINE>
+      <COLUMN>32</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts that would perform a static_cast downcast, const_cast, or reinterpret_cast. (type.4: http://go.microsoft.com/fwlink/p/?LinkID=620420)</DESCRIPTION>
+    <FUNCTION>Solver::checkNode</FUNCTION>
+    <DECORATED>?checkNode@Solver@@QAE_NXZ</DECORATED>
+    <FUNCLINE>20</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\</FILEPATH>
+      <FILENAME>solver.cpp</FILENAME>
+      <LINE>182</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26496</DEFECTCODE>
+    <DESCRIPTION>Variable 'distance' is assigned only once, mark it as const. (con.4: https://go.microsoft.com/fwlink/p/?LinkID=784969)</DESCRIPTION>
+    <FUNCTION>Solver::DrawNodes</FUNCTION>
+    <DECORATED>?DrawNodes@Solver@@QAE?AUPosition@@U2@@Z</DECORATED>
+    <FUNCLINE>177</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\</FILEPATH>
+      <FILENAME>solver.cpp</FILENAME>
+      <LINE>217</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>26496</DEFECTCODE>
+    <DESCRIPTION>Variable 'foundEnd' is assigned only once, mark it as const. (con.4: https://go.microsoft.com/fwlink/p/?LinkID=784969)</DESCRIPTION>
+    <FUNCTION>Solver::start</FUNCTION>
+    <DECORATED>?start@Solver@@QAEXXZ</DECORATED>
+    <FUNCLINE>211</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\</FILEPATH>
+      <FILENAME>solver.h</FILENAME>
+      <LINE>28</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts that would perform a static_cast downcast, const_cast, or reinterpret_cast. (type.4: http://go.microsoft.com/fwlink/p/?LinkID=620420)</DESCRIPTION>
+    <FUNCTION>Solver::{ctor}</FUNCTION>
+    <DECORATED>??0Solver@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>238</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bill\source\repos\mazesover3.0\</FILEPATH>
+      <FILENAME>solver.h</FILENAME>
+      <LINE>29</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts that would perform a static_cast downcast, const_cast, or reinterpret_cast. (type.4: http://go.microsoft.com/fwlink/p/?LinkID=620420)</DESCRIPTION>
+    <FUNCTION>Solver::{ctor}</FUNCTION>
+    <DECORATED>??0Solver@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>238</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

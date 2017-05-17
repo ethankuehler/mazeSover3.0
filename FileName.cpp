@@ -2,7 +2,6 @@
 #include <sstream>
 std::string getFileName() {
   ++id;
-  std::ostringstream oss;
-  oss << "output" << id << ".bmp";
-  return oss.str();
+  std::string output =  "output" + std::to_string(id)  + ".bmp";
+  return output;
 }

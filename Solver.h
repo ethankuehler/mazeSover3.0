@@ -16,12 +16,15 @@ bool operator==(const Position &left, const Position &right);
 bool operator!=(const Position &left, const Position &right);
 
 struct Solver {
+
   // a 2d vector of nodes, the position of each node is drectly coarspoing to
   // its location on the image
   std::vector<std::vector<Node> > NodeMap;
+
   // a queue of nodes to be checked by the func checkNode, nodes are pushed and
   // poped by looKforNextNode who is called by checkNode;
   std::queue<Node> nodeQueue;
+
   // the raw image data, only to be modified by drawNodes
   BMP image;
 
@@ -32,7 +35,6 @@ struct Solver {
 
   // fills the node map with nodes
   void FillNodeMap();
-
 
   // check a node on the node queue, findes other nods the check and pops off
   // old ones;
