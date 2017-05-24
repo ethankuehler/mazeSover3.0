@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/ethankuehler/Documents/MazeSolver_src",
+  "command": "/usr/bin/c++      -std=gnu++14 -o CMakeFiles/MazeSovler.dir/Main.cpp.o -c /home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/Main.cpp",
+  "file": "/home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/Main.cpp"
+},
+{
+  "directory": "/home/ethankuehler/Documents/MazeSolver_src",
+  "command": "/usr/bin/c++      -std=gnu++14 -o CMakeFiles/MazeSovler.dir/Node.cpp.o -c /home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/Node.cpp",
+  "file": "/home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/Node.cpp"
+},
+{
+  "directory": "/home/ethankuehler/Documents/MazeSolver_src",
+  "command": "/usr/bin/c++      -std=gnu++14 -o CMakeFiles/MazeSovler.dir/Solver.cpp.o -c /home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/Solver.cpp",
+  "file": "/home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/Solver.cpp"
+},
+{
+  "directory": "/home/ethankuehler/Documents/MazeSolver_src",
+  "command": "/usr/bin/c++      -std=gnu++14 -o CMakeFiles/MazeSovler.dir/FileName.cpp.o -c /home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/FileName.cpp",
+  "file": "/home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/FileName.cpp"
+},
+{
+  "directory": "/home/ethankuehler/Documents/MazeSolver_src",
+  "command": "/usr/bin/c++      -std=gnu++14 -o CMakeFiles/MazeSovler.dir/easyBMP/EasyBMP.cpp.o -c /home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/easyBMP/EasyBMP.cpp",
+  "file": "/home/ethankuehler/Documents/MazeSolver_src/mazeSover3.0/easyBMP/EasyBMP.cpp"
+}
+]
